@@ -1,0 +1,2 @@
+class SukureController < ApplicationController
+end
