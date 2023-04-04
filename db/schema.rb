@@ -10,11 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_29_135738) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_04_152621) do
+  create_table "books", force: :cascade do |t|
+    t.integer "inout"
+    t.string "category"
+    t.integer "year"
+    t.integer "month"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "ideas", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "kakeibos", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
