@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>kakeibo detail</title>
+</head>
+<body>
+<h1>detail</h1>
+<table class = "table table-striped">
+	<tr>
+		<th>year/month</th>
+		<td><%book.year%>/<%= book.month%> </td>
+	</tr>
+	<tr>
+		<th>category</th>
+		<td><%= book.inout %> </td>
+	</tr>
+	<tr>
+		<th>subject</th>
+		<td><%= book.category %> </td>
+	</tr>
+	<tr>
+			<th>amount</th>
+			<td><%= book.amount %> $</td></tr>
+</table>
+</body>
+</html>

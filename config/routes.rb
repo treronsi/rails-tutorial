@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'pages/info'
   get "/books" ,to: "books#index"
+  	get "/books/:id" , to: "books#show", as "book"
   root to: redirect('/tasks')
   resources :ideas
   resources :tasks
