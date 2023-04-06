@@ -12,6 +12,7 @@
 		<th>category</th>
 		<th>subject</th>
 		<th>amount</th>
+		<th>detail</th>
 	</tr>
 	<% @books.each do |book| %>
 	<tr>
@@ -19,6 +20,7 @@
 		<td><%= book.inout %> </td>
 		<td><%= book.category %> </td>
 		<td><%= book.amount %> </td>
+		<td><%= link_to "detail", book_path(book), class: "btn btn-info" %></td>
 	</tr>
 	<%end%>
 </table>
