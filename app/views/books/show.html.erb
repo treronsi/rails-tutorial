@@ -10,19 +10,19 @@
 <table class = "table table-striped">
 	<tr>
 		<th>year/month</th>
-		<td><%book.year%>/<%= book.month%> </td>
+		<td><%= @book.year %>/<%= @book.month %> </td>
 	</tr>
 	<tr>
 		<th>category</th>
-		<td><%= book.inout %> </td>
+		<td><%= @book.inout %> </td>
 	</tr>
 	<tr>
 		<th>subject</th>
-		<td><%= book.category %> </td>
+		<td><%= @book.category %> </td>
 	</tr>
 	<tr>
 			<th>amount</th>
-			<td><%= book.amount %> $</td></tr>
+			<td><%= @book.amount %> $</td></tr>
 </table>
 </body>
 </html>
