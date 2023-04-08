@@ -10,6 +10,8 @@ class BooksController < ApplicationController
 	
 	def new
 		@book = Book.new
+		@book.year = 2023
+		@book.month = 4
 	end
 
 end
