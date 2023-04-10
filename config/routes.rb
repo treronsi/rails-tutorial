@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   	get "/books/new" , to: "books#new", as: "new_book"
   	get "/books/:id/edit" , to: "books#edit", as: "edit_book"
   	get "/books/:id" , to: "books#show", as: "book"
+  patch"/books/:id" , to: "books#update"
+   delete 'books/:id' => 'books#destroy'
   root to: redirect('/tasks')
   resources :ideas
   resources :tasks
