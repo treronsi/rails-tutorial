@@ -18,8 +18,10 @@ class BooksController < ApplicationController
 		book_params = params.require(:book).permit(:year, :month, :inout, :category, :amount)
 		@book = Book.new(book_params)
 		if @book.save
+			flash[:notice]="added!"
 			redirect_to books_path
 		else
+			flash.now[:alert] = "faild"
 			render :new
 		end
 	end
@@ -34,8 +36,10 @@ class BooksController < ApplicationController
 			book_params = params.require(:book).permit(:year, :month, :inout, :category, :amount)
 		
 		if @book.update(book_params)
+			flash[:notice]="updated!"
 			redirect_to books_path
 		else
+			flash.now[:alert] = "faild"
 			render :edit
 		end
 	end
@@ -43,6 +47,7 @@ class BooksController < ApplicationController
 	def destroy
 		@book = Book.find(params[:id])
 		@book.destroy
+		flash[:notice]="bye!"
 		redirect_to books_path
 		
 	end
