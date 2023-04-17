@@ -6,6 +6,23 @@
 	<title></title>
 </head>
 <body>
+<div class = "card">
+	<div class="card-body">
+		<%= form_with method: "get",local: true do |f| %>
+		<div class="form-row">
+			<div class="col">
+				<%= f.number_field "year", placeholder:"WHAT'S YEAR", class: "form-control" %>
+			</div>
+				<%= f.number_field "month", placeholder:"WHAT'S MONTH", class: "form-control" %>
+			</div>
+			<div class="col">
+				<%= f.submit "searh", class: "btn btn-primary" %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
+<br>
 <table class ="table table-striped"> 
 	<tr>
 		<th>year/month</th>
@@ -28,6 +45,8 @@
 	</tr>
 	<% end %>
 </table>
+
 <%= link_to "new", new_book_path, class: "btn btn-secondary" %> 
 </body>
+
 </html>
