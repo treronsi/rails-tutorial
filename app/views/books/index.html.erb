@@ -38,7 +38,13 @@
 	<tr>
 		<td><%= book.year%>/<%= book.month%> </td>
 		<td><%= book.inout %> </td>
-		<td><%= book.category %> </td>
+		<td><%= book.category %> 
+			<!---<%if book.category ==1 %>
+			<%= income %>
+			<%else %>
+				<%= expenditue %> --->
+
+			</td>
 		<td><%= book.amount %> </td>
 		<td><%= link_to "detail", book_path(book), class: "btn btn-info" %></td>
 		<td><%= link_to "edit", edit_book_path(book), class: "btn btn-primary" %></td>
